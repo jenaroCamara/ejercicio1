@@ -5,7 +5,6 @@ import java.io.IOException;
 
 import principal.java.*;
 
-//package primerPaquete;
 public class main {
     public static void main(String[] args) throws IOException {
         fichero f = new fichero();

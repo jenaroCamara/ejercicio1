@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Optional;
 
 public class fichero {
     public ArrayList<Persona> muestraContenido(String archivo) throws FileNotFoundException, IOException {
@@ -22,7 +21,6 @@ public class fichero {
                     if (Integer.parseInt(arrOfStr[2]) < 25) {
                         Persona p = new Persona(arrOfStr[0], arrOfStr[1], Integer.parseInt(arrOfStr[2]));
                         listaPersonas.add(p);
-                        //System.out.println("nombre: " + arrOfStr[0] + ", ciudad: " + arrOfStr[1] + ", edad: " + arrOfStr[2]);
                     }
                 }
 
@@ -38,11 +36,9 @@ public class fichero {
     }
 
     public void muestraPersona(ArrayList<Persona> lista) {
+        System.out.println("---------Usuarios < 25---------");
         for (int iterator = 0; iterator < lista.size(); iterator++) {
             System.out.println("Nombre: " + lista.get(iterator).nombre + ". Poblacion: " + lista.get(iterator).poblacion + ". Edad: " + lista.get(iterator).edad);
         }
-    }
-
-    public static void main(String[] args) throws IOException {
     }
 }
